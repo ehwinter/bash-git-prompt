@@ -27,20 +27,20 @@ directory, your prompt works like normal.
 
 ## Installation
 
-Clone the project to a `.bash` folder in your home directory:
+Clone the project to a `config` folder in your home directory:
 
 ```bash
-mkdir ~/.bash
-cd ~/.bash
+mkdir ~/config
+cd ~/config
 git clone git://github.com/jimeh/git-aware-prompt.git
 ```
 
-Edit your  `~/.profile` or `~/.bash_profile` and add the following to the top:
+Edit your  `~/.profile` or `~/config_profile` and add the following to the top:
 
 ```bash
-export GITAWAREPROMPT=~/.bash/git-aware-prompt
+export GITAWAREPROMPT=~/config/git-aware-prompt
 source $GITAWAREPROMPT/main.sh
-export PS1="\u@\h \w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
+export PS1="\u@\h:\w \[$txtcyn\]\$git_branch\[$txtred\]\$git_dirty\[$txtrst\]\$ "
 ```
 
 Optionally, if you want a nice pretty prompt when using `sudo -s`, also add
@@ -73,10 +73,10 @@ of available colors check `colors.sh`.
 ## Updating
 
 Assuming you followed the default installation instructions and cloned this
-repo to `~/.bash/git-aware-prompt`:
+repo to `~/config/git-aware-prompt`:
 
 ```bash
-cd ~/.bash/git-aware-prompt
+cd ~/config/git-aware-prompt
 git pull
 ```
 
@@ -86,22 +86,3 @@ git pull
 To view other user's tips, please check the
 [Usage Tips](https://github.com/jimeh/git-aware-prompt/wiki/Usage-Tips) wiki
 page. Or if you have tips of your own, feel free to add them :)
-
-
-## License
-
-```
-        DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 2, December 2004
-
- Copyright (C) 2014 Jim Myhrberg
-
- Everyone is permitted to copy and distribute verbatim or modified
- copies of this license document, and changing it is allowed as long
- as the name is changed.
-
-            DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-   TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
-
-  0. You just DO WHAT THE FUCK YOU WANT TO.
-```
